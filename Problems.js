@@ -34,3 +34,27 @@ const processNumber = (inputNumber) => {
   return incrementByFive(doubleValue(squareValue(inputNumber)));
 };
 // console.log(processNumber(4));
+
+
+// Problem 4 Sorting Objects - Solution
+const vehicleInventory = [
+  { make: "Mazda", model: "3", year: 2020 },
+  { make: "Chevrolet", model: "Cruze", year: 2016 },
+  { make: "BMW", model: "320i", year: 2019 }
+];
+
+const sortVehiclesByYear = (vehicles) => {
+  return vehicles.sort((carA, carB) => carA.year - carB.year);
+};
+// console.log(sortVehiclesByYear(vehicleInventory));
+
+
+// Problem 5 Array Reduction - Solution
+const scoreList = [10, 15, 22, 7, 6, 13, 4];
+
+const getEvenSum = (numberArray) => {
+  return numberArray.reduce((total, current) => {
+    return current % 2 === 0 ? total + current : total;
+  }, 0);
+};
+// console.log(getEvenSum(scoreList));
